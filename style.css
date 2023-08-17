@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.menu {
+  display: grid;
+  justify-content: center;
+  width: 10%;
+  margin: auto;
+  height: 100vh;
+  align-items: center;
+}
+
+.pagina {
+  font-size: 24px;
+  position: grid;
+  text-shadow: 2px 2px 2px black;
+  color: #3498db;
+  font-family:  Tahoma;
+  color: #3498db;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.button {
+    background-color: linear-gradient(135deg, #3498db, #007bff);
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    height: 100%;
+    background-size: 200% 200%;
+  }
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 88vh;
+  border-radius: 50px;
+  color: #fff;
+  flex: 0.1;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  text-shadow: 2px 2px 2px black;
+}
+
+.arrow-button.arrow-button-left {
+     content: "\1F870"; 
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+}
+
+.panel.active {
+  flex: 1;
+  margin-left: 40px;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.entry {
+    margin-bottom: 20px;
+}
+
+  .entry h3 {
+    font-size: 24px;
+    margin: 0;
+    text-shadow: 2px 2px 2px black;
+  }
+
+.panelfinal {
+    background-color: #2980b9;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 30px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .arrow-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 15px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.arrow-button button {
+    background-color: #3498db; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 3px;
+    font-size: 16px; 
+    padding: 0 25px;
+}
+
+.arrow-button::before {
+    content: "\1F872";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
